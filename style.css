@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container section {
+  width: 48%;
+  height: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container section .image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.container section .image.static {
+  background: url("demo.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.container section .image.static .box {
+  position: fixed;
+  width: 10%;
+  aspect-ratio: 1/1;
+  background: rgba(255, 255, 255, 0);
+}
+
+.container section .image.static:hover .box {
+  background: rgba(255, 255, 255, 0.459);
+}
+
+.container section .image.zoom {
+  overflow: hidden;
+  position: relative;
+  background: url("demo.jpg");
+  background-size: 480%;
+  background-position: 0% 0%;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
